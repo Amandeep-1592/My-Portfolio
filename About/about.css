@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://images.hdqwalls.com/download/dodge-challenger-srt-hellcat-4k-2019-9a-1920x1080.jpg');
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 120%;
+}
+
+header {
+    background-color: #222222;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode header {
+    background-color: #222222;
+}
+
+.home-button {
+    position: relative;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: radial-gradient(circle, #fd68b3 30%, #ff1493 70%);
+    color: ghostwhite;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.8em 1.2em;
+    transition: background-color 0.4s, transform 0.4s;
+}
+
+.home-button svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+    color: white;
+}
+
+.home-button span {
+    z-index: 10;
+    transition: color 0.4s;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+}
+
+.home-button::before,
+.home-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.home-button::before {
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+}
+
+.home-button:hover::before {
+    transform: translate3d(100%, 0, 0);
+    background: radial-gradient(circle, #ff69b4 10%, #ff1493 50%);
+}
+
+.home-button:active {
+    transform: scale(0.95);
+}
+
+.team-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    margin-top: 120px; /* Adjusted to avoid header overlap */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 60px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.team-member {
+    padding: 0 30px;
+    margin-bottom: 30px;
+}
+
+.member-image {
+    max-width: 300px;
+    max-height: 250px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.member-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.member-image:hover img {
+    transform: scale(1.1);
+}
+
+.member-info {
+    background-image: url('https://media.istockphoto.com/id/1288526180/photo/4k-abstract-white-backgrounds.jpg?b=1&s=612x612&w=0&k=20&c=DoL2JfG_nI_UiB7RUQub2n3UDKpKJPhNhLLobJ47Flw=');
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.member-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.member-email {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.member-linkedin {
+    font-size: 16px;
+    color: #d56d0b;
+    text-decoration: none;
+}
+
+.member-linkedin:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode Specific Styles */
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.dark-mode header {
+    background-color: #222222;
+}
+
+.dark-mode .team-section {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark-mode .section-title {
+    color: #ffffff;
+}
+
+.dark-mode .member-info {
+    background-image: url('https://media.istockphoto.com/id/1288526180/photo/4k-abstract-white-backgrounds.jpg?b=1&s=612x612&w=0&k=20&c=DoL2JfG_nI_UiB7RUQub2n3UDKpKJPhNhLLobJ47Flw=');
+    color: #ffffff;
+}
+
+.dark-mode .member-email {
+    color: #cccccc;
+}
+
+.dark-mode .member-linkedin {
+    color: #ffbb33;
+}
+
+.dark-mode .home-button {
+    background: radial-gradient(circle, #ff69b4 10%, #ff1493 50%);
+}
+
+.dark-mode .home-button svg {
+    color: #ffffff;
+}
+
+.dark-mode .home-button span {
+    color: #ffffff;
+}
