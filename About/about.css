@@ -94,9 +94,9 @@ header {
     transform: scale(0.95);
 }
 
-.team-section {
+.about-section {
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px 0;
+    padding: 20px 0;
     margin-top: 120px; /* Adjusted to avoid header overlap */
 }
 
@@ -119,58 +119,56 @@ header {
     font-size: 36px;
     font-weight: bold;
     color: #ffffff;
-    margin-bottom: 60px;
-    font-family: 'Indie Flower', cursive;
+    margin-bottom: 40px;
+    font-family: 'Arial', sans-serif;
 }
 
-.team-member {
-    padding: 0 30px;
-    margin-bottom: 30px;
+.about-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.member-image {
+.profile-image {
     max-width: 300px;
-    max-height: 250px;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    position: relative;
+    max-height: 300px;
+    border-radius: 50%;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.member-image img {
+.profile-image img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-.member-image:hover img {
+.profile-image:hover img {
     transform: scale(1.1);
 }
 
-.member-info {
-    background-image: url('https://media.istockphoto.com/id/1288526180/photo/4k-abstract-white-backgrounds.jpg?b=1&s=612x612&w=0&k=20&c=DoL2JfG_nI_UiB7RUQub2n3UDKpKJPhNhLLobJ47Flw=');
-    background-size: cover;
+.about-info {
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 0 0 8px 8px;
-    font-family: 'Indie Flower', cursive;
 }
 
-.member-name {
+.about-name {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.member-email {
+.about-text {
     font-size: 16px;
     margin-bottom: 10px;
-    color: black;
+    color: #333;
 }
 
 .member-linkedin {
     font-size: 16px;
-    color: #d56d0b;
+    color: #007BFF;
     text-decoration: none;
 }
 
@@ -188,7 +186,7 @@ header {
     background-color: #222222;
 }
 
-.dark-mode .team-section {
+.dark-mode .about-section {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -196,12 +194,12 @@ header {
     color: #ffffff;
 }
 
-.dark-mode .member-info {
-    background-image: url('https://media.istockphoto.com/id/1288526180/photo/4k-abstract-white-backgrounds.jpg?b=1&s=612x612&w=0&k=20&c=DoL2JfG_nI_UiB7RUQub2n3UDKpKJPhNhLLobJ47Flw=');
+.dark-mode .about-info {
+    background-color: rgba(34, 34, 34, 0.8);
     color: #ffffff;
 }
 
-.dark-mode .member-email {
+.dark-mode .about-text {
     color: #cccccc;
 }
 
