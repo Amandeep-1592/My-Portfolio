@@ -29,6 +29,11 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+header h1 {
+    color: White;
+}
+
+
 .home-button {
     position: relative;
     font-family: inherit;
